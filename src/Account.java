@@ -4,6 +4,15 @@ public class Account {
     private Integer balance;
     private Date dateStart;
     private Integer interest;
+    private User owner;
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
 
     public Integer getInterest() {
         return interest;
