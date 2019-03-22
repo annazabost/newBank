@@ -1,4 +1,4 @@
-public class savingsAccount extends Account {
+public class savingsAccount extends Account implements Operations {
 
     private Integer savingsMoney;
 
@@ -8,5 +8,26 @@ public class savingsAccount extends Account {
 
     public void setSavingsMoney(Integer savingsMoney) {
         this.savingsMoney = savingsMoney;
+    }
+
+    @Override
+    public void addMoney(Integer money) {
+
+        setBalance(getBalance()+money);
+
+    }
+
+    @Override
+    public void checkBalance() {
+
+        System.out.println("Balance: " + getBalance());
+
+    }
+
+    @Override
+    public void outMoney(Integer money) {
+
+        setBalance(getBalance()-money);
+
     }
 }

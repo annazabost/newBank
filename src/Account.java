@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Account {
+public class Account implements Operations{
     private Integer balance;
     private Date dateStart;
     private Integer interest;
@@ -36,5 +36,24 @@ public class Account {
 
     public void setDateStart(Date dateStart) {
         this.dateStart = dateStart;
+    }
+
+    @Override
+    public void addMoney(Integer money) {
+        setBalance(getBalance()+money);
+    }
+
+    @Override
+    public void checkBalance() {
+
+        System.out.println("Balance: " + getBalance());
+
+    }
+
+    @Override
+    public void outMoney(Integer money) {
+
+        setBalance(getBalance()-money);
+
     }
 }
