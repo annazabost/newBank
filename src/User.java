@@ -4,10 +4,10 @@ public class User {
 
     private String name;
     private String surname;
-    private final Long pesel;
-    private Date dateOfBirth;
+    private final Integer pesel;
+    private String dateOfBirth;
 
-    public User(Long pesel) {
+    public User(Integer pesel) {
         this.pesel = pesel;
     }
 
@@ -27,15 +27,15 @@ public class User {
         this.surname = surname;
     }
 
-    public Long getPesel() {
+    public Integer getPesel() {
         return pesel;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }

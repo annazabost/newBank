@@ -7,6 +7,7 @@ public class premiumAccount extends Account implements Operations {
     }
 
     public premiumAccount(Integer bonus) {
+        super();
         this.bonus = bonus;
     }
 

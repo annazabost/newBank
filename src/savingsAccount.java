@@ -2,6 +2,10 @@ public class savingsAccount extends Account implements Operations {
 
     private Integer savingsMoney;
 
+    public savingsAccount(Integer balance, String dateStart, Integer interest, User owner) {
+        super(balance, dateStart, interest, owner);
+    }
+
     public Integer getSavingsMoney() {
         return savingsMoney;
     }

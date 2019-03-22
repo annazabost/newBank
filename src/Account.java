@@ -2,9 +2,13 @@ import java.util.Date;
 
 public class Account implements Operations{
     private Integer balance;
-    private Date dateStart;
+    private String dateStart;
     private Integer interest;
     private User owner;
+
+    public Account() {
+
+    }
 
     public User getOwner() {
         return owner;
@@ -30,11 +34,11 @@ public class Account implements Operations{
         this.balance = balance;
     }
 
-    public Date getDateStart() {
+    public String getDateStart() {
         return dateStart;
     }
 
-    public void setDateStart(Date dateStart) {
+    public void setDateStart(String dateStart) {
         this.dateStart = dateStart;
     }
 
@@ -56,4 +60,25 @@ public class Account implements Operations{
         setBalance(getBalance()-money);
 
     }
+
+    public void sayDebit(){
+        System.out.println("You don't have money! Balance: " + getBalance());
+    }
+
+    public void checkDebit(){
+        if (getBalance()<0){
+            sayDebit();
+        } else {
+            System.out.println("Balance: " + getBalance());
+        }
+    }
+
+    public Account(Integer balance, String dateStart, Integer interest, User owner) {
+        this.balance = balance;
+        this.dateStart = dateStart;
+        this.interest = interest;
+        this.owner = owner;
+    }
 }
+
+

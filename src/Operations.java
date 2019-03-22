@@ -4,4 +4,5 @@ public interface Operations {
     void checkBalance();
     void outMoney(Integer money);
 
+
 }
